@@ -396,7 +396,7 @@ model-viewer {
   display: none;
 }
 .hero-image {
-  background-image: url("Hero image.png.png"); /* Replace with the correct image path */
+  background-image: url("Hero image.png"); /* Replace with the correct image path */
   background-size: cover;
   background-position: center;
   height: 100vh;
