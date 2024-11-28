@@ -47,3 +47,37 @@ modelViewers.forEach((modelViewer) => {
     }
   });
 });
+// Add this to your script.js file
+function changeSlide(button, direction) {
+  const slideshow = button.closest(".slideshow-container");
+  const slides = slideshow.getElementsByClassName("slide");
+  let activeIndex = 0;
+
+  // Find the current active slide
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].querySelector("img.active")) {
+      activeIndex = i;
+      slides[i].querySelector("img").classList.remove("active");
+      break;
+    }
+  }
+
+  // Calculate the new index
+  let newIndex = activeIndex + direction;
+  if (newIndex >= slides.length) newIndex = 0;
+  if (newIndex < 0) newIndex = slides.length - 1;
+
+  // Activate the new slide
+  slides[newIndex].querySelector("img").classList.add("active");
+}
+
+// Initialize all slideshows
+document.addEventListener("DOMContentLoaded", function () {
+  const slideshows = document.querySelectorAll(".slideshow-container");
+  slideshows.forEach((slideshow) => {
+    const firstImage = slideshow.querySelector("img");
+    if (firstImage) {
+      firstImage.classList.add("active");
+    }
+  });
+});
