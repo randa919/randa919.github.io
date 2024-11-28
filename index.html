@@ -23,6 +23,10 @@
         width: 100%;
       }
     </style>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
   <body>
     <nav class="main-nav">
@@ -68,6 +72,7 @@
     <section id="artifacts" class="items">
       <h2>Featured Artifacts</h2>
       <div class="artifacts-grid">
+        <!-- Artifact 1 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -83,12 +88,7 @@
               <img src="artifacts3(2).png" alt="Artifact 1 - View 2" />
               <img src="artifacts3(3).png" alt="Artifact 1 - View 3" />
             </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
           </div>
-
           <div class="description">
             <h3>Artifact 1: Qing Dynasty Covered Baluster Vase</h3>
             <p>
@@ -100,20 +100,18 @@
               the neck and a domed cover adorned with ladies, flowers, and
               rocks.
             </p>
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase1.glb"
-                ios-src="models/vase1.usdz"
-                alt="3D model of Qing Dynasty Covered Baluster Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              ></model-viewer>
-            </div>
+            <model-viewer
+              src="models/vase1.glb"
+              ios-src="models/vase1.usdz"
+              alt="3D model of Qing Dynasty Covered Baluster Vase"
+              shadow-intensity="1"
+              camera-controls
+              auto-rotate
+              ar
+            ></model-viewer>
           </div>
         </div>
+        <!-- Artifact 2 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -129,12 +127,7 @@
               <img src="artificts1(1).png" alt="Artifact 2 - View 2" />
               <img src="artificts4.png" alt="Artifact 2 - View 3" />
             </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
           </div>
-
           <div class="description">
             <h3>Artifact 2: Qing Dynasty Vase</h3>
             <p>
@@ -144,21 +137,18 @@
               mountain and lake scene painted in cobalt pigment beneath a clear
               glaze.
             </p>
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase2.glb"
-                ios-src="models/vase2.usdz"
-                alt="3D model of Qing Dynasty Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              ></model-viewer>
-            </div>
+            <model-viewer
+              src="models/vase2.glb"
+              ios-src="models/vase2.usdz"
+              alt="3D model of Qing Dynasty Vase"
+              shadow-intensity="1"
+              camera-controls
+              auto-rotate
+              ar
+            ></model-viewer>
           </div>
         </div>
-
+        <!-- Artifact 3 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -174,12 +164,7 @@
               <img src="artifacts2(2).png" alt="Artifact 3 - View 2" />
               <img src="artifacts2(3).png" alt="Artifact 3 - View 3" />
             </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
           </div>
-
           <div class="description">
             <h3>Artifact 3: Qing Dynasty Beaker-Shaped Vase</h3>
             <p>
@@ -189,23 +174,19 @@
               blue, featuring court scenes on the neck and court ladies in a
               garden on the body.
             </p>
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase3.glb"
-                ios-src="models/vase3.usdz"
-                alt="3D model of Qing Dynasty Beaker-Shaped Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              ></model-viewer>
-            </div>
+            <model-viewer
+              src="models/vase3.glb"
+              ios-src="models/vase3.usdz"
+              alt="3D model of Qing Dynasty Beaker-Shaped Vase"
+              shadow-intensity="1"
+              camera-controls
+              auto-rotate
+              ar
+            ></model-viewer>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
