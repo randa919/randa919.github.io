@@ -1,4 +1,3 @@
-// Enhanced slideshow function
 function changeSlide(button, direction) {
   const slideshow = button.closest(".slideshow");
   const images = slideshow.querySelectorAll("img");
@@ -6,12 +5,12 @@ function changeSlide(button, direction) {
     img.classList.contains("active")
   );
 
-  // Remove active class from current image
+  // Remove 'active' class from current image
   images[activeIndex].classList.remove("active");
 
-  // Calculate new index with wrap-around
-  activeIndex = (activeIndex + direction + images.length) % images.length;
+  // Calculate new active index
+  let newIndex = (activeIndex + direction + images.length) % images.length;
 
-  // Add active class to new image
-  images[activeIndex].classList.add("active");
+  // Add 'active' class to the new image
+  images[newIndex].classList.add("active");
 }
