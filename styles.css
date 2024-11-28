@@ -277,8 +277,9 @@ h4 {
 
 /* Contact Form */
 .contact-form {
-  max-width: 600px;
+  max-width: 300px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .form-group {
