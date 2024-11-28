@@ -100,6 +100,7 @@
               the neck and a domed cover adorned with ladies, flowers, and
               rocks.
             </p>
+
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -110,7 +111,11 @@
                 camera-controls
                 auto-rotate
                 ar
-              ></model-viewer>
+              >
+                <button slot="ar-button" class="ar-button">
+                  View in your space
+                </button>
+              </model-viewer>
             </div>
           </div>
         </div>
@@ -144,6 +149,8 @@
               mountain and lake scene painted in cobalt pigment beneath a clear
               glaze.
             </p>
+
+            ]
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -154,7 +161,11 @@
                 camera-controls
                 auto-rotate
                 ar
-              ></model-viewer>
+              >
+                <button slot="ar-button" class="ar-button">
+                  View in your space
+                </button>
+              </model-viewer>
             </div>
           </div>
         </div>
@@ -189,6 +200,7 @@
               blue, featuring court scenes on the neck and court ladies in a
               garden on the body.
             </p>
+
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -199,7 +211,11 @@
                 camera-controls
                 auto-rotate
                 ar
-              ></model-viewer>
+              >
+                <button slot="ar-button" class="ar-button">
+                  View in your space
+                </button>
+              </model-viewer>
             </div>
           </div>
         </div>
@@ -222,8 +238,12 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Museum of History. All rights reserved</p>
+        <p>&copy; 2024 Museum of History. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
