@@ -3,9 +3,321 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Museum of History</title>
+    <meta
+      name="description"
+      content="Explore the beautiful artistry of Jingdezhen Porcelain through our virtual museum collection"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>hi it worked</h1>
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="#" class="logo">Museum of History</a>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#intro">About</a></li>
+          <li><a href="#artifacts">Artifacts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div
+        class="hero-image"
+        role="img"
+        aria-label="Historical Jingdezhen Porcelain display"
+      ></div>
+      <div class="hero-content">
+        <h1>
+          Timeless Treasures: Exploring the Artistry of Jingdezhen Porcelain
+        </h1>
+        <a href="#artifacts" class="cta-button">Explore Collection</a>
+      </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro">
+      <div class="description">
+        <h2>Welcome to the Artistry of Jingdezhen Porcelain</h2>
+        <p>
+          Welcome to Timeless Treasures, where the exquisite craftsmanship of
+          Jingdezhen porcelain comes to life. This virtual museum showcases
+          three iconic artifacts from China's Qing Dynasty, offering an
+          immersive experience through detailed 3D models. Delve into the
+          history, artistry, and cultural significance of these masterpieces,
+          and explore the intricate designs that have captivated collectors and
+          art lovers for centuries.
+        </p>
+      </div>
+    </section>
+
+    <!-- Items Section -->
+    <section id="artifacts" class="items">
+      <h2>Featured Artifacts</h2>
+      <div class="artifacts-grid">
+        <!-- Artifact 1 -->
+        <div class="artifact" data-aos="fade-up">
+          <div
+            class="slideshow"
+            role="region"
+            aria-label="Artifact 1 image gallery"
+          >
+            <div class="slideshow-container">
+              <img
+                src="imgae(1)-Camera.png"
+                alt="Qing Dynasty Covered Baluster Vase - Front view"
+                class="active"
+                loading="lazy"
+              />
+              <img src="imgae(1)-Camera 2.png" alt="Artifact 1 - View 2" />
+              <img src="art 1 .sg-Camera.png" alt="Artifact 1 - View 3" />
+            </div>
+            <div class="slideshow-nav">
+              <button
+                class="prev"
+                onclick="changeSlide(this, -1)"
+                aria-label="Previous image"
+              >
+                <span aria-hidden="true">&#10094;</span>
+              </button>
+              <div class="slideshow-dots"></div>
+              <button
+                class="next"
+                onclick="changeSlide(this, 1)"
+                aria-label="Next image"
+              >
+                <span aria-hidden="true">&#10095;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="description">
+            <h3>Artifact 1: Qing Dynasty Covered Baluster Vase</h3>
+            <p>
+              This covered baluster vase is part of a five-piece garniture from
+              the Qing dynasty, dating from the Kangxi reign (1662-1722). It is
+              crafted from white porcelain with cobalt pigment under a clear
+              glaze. The vase features a painted scene of a court lady being
+              entertained by dancers and musicians, with floral decorations on
+              the neck and a domed cover adorned with ladies, flowers, and
+              rocks. Originally part of a collection owned by Mrs. B.F. Jones,
+              it was gifted to the Freer Gallery of Art in 1980 by Myron S.
+              Falk, Jr. and his sisters.
+            </p>
+
+            <!-- 3D Model Placeholder for Artifact 1 -->
+            <div class="model-viewer-container">
+              <h4>Explore 3D Model</h4>
+              <model-viewer
+                src="path-to-your-3d-model1.glb"
+                alt="3D model of Qing Dynasty Covered Baluster Vase"
+                auto-rotate
+                camera-controls
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                background-color="#f0f0f0"
+                poster="path-to-poster-image.webp"
+                loading="lazy"
+                style="width: 100%; height: 400px"
+              >
+                <button slot="ar-button" class="ar-button">
+                  View in your space
+                </button>
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artifact 2 -->
+        <div class="artifact" data-aos="fade-up">
+          <div
+            class="slideshow"
+            role="region"
+            aria-label="Artifact 2 image gallery"
+          >
+            <div class="slideshow-container">
+              <img
+                src="Image2(2)-Camera 2.png"
+                alt="Artifact 2 - View 1"
+                class="active"
+                loading="lazy"
+              />
+              <img src="Image2(3)-Camera 2.png" alt="Artifact 2 - View 2" />
+              <img src="imgae(3)-Camera 2.png" alt="Artifact 2 - View 3" />
+            </div>
+            <div class="slideshow-nav">
+              <button
+                class="prev"
+                onclick="changeSlide(this, -1)"
+                aria-label="Previous image"
+              >
+                <span aria-hidden="true">&#10094;</span>
+              </button>
+              <div class="slideshow-dots"></div>
+              <button
+                class="next"
+                onclick="changeSlide(this, 1)"
+                aria-label="Next image"
+              >
+                <span aria-hidden="true">&#10095;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="description">
+            <h3>Artifact 2: Qing Dynasty Vase</h3>
+            <p>
+              This Qing Dynasty vase, circa 1700, originates from Jingdezhen,
+              Jiangxi Province, China. Featuring a tall cylindrical shape with a
+              narrow neck and outflaring rim, the vase is adorned with a
+              mountain and lake scene painted in cobalt pigment beneath a clear
+              glaze. It measures 26.3 cm in height and 11.7 cm in diameter, made
+              of porcelain. Previously owned by Mrs. Julia B. Curtis of
+              Williamsburg, VA, the vase was gifted to the Freer Gallery of Art
+              in 1991 and is part of its collection.
+            </p>
+
+            <!-- 3D Model Placeholder for Artifact 2 -->
+            <div class="model-viewer-container">
+              <h4>Explore 3D Model</h4>
+              <model-viewer
+                src="path-to-your-3d-model2.glb"
+                alt="Roman Coin"
+                auto-rotate
+                camera-controls
+                background-color="#f0f0f0"
+                style="width: 100%; height: 400px"
+              ></model-viewer>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artifact 3 -->
+        <div class="artifact" data-aos="fade-up">
+          <div
+            class="slideshow"
+            role="region"
+            aria-label="Artifact 3 image gallery"
+          >
+            <div class="slideshow-container">
+              <img
+                src="Image3(1)-Camera 2.png"
+                alt="Artifact 3 - View 1"
+                class="active"
+                loading="lazy"
+              />
+              <img src="Image3(2)-Camera 2.png" alt="Artifact 3 - View 2" />
+              <img src="Image3(3)-Camera 2.png" alt="Artifact 3 - View 3" />
+            </div>
+            <div class="slideshow-nav">
+              <button
+                class="prev"
+                onclick="changeSlide(this, -1)"
+                aria-label="Previous image"
+              >
+                <span aria-hidden="true">&#10094;</span>
+              </button>
+              <div class="slideshow-dots"></div>
+              <button
+                class="next"
+                onclick="changeSlide(this, 1)"
+                aria-label="Next image"
+              >
+                <span aria-hidden="true">&#10095;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="description">
+            <h3>Qing Dynasty Beaker-Shaped Vase</h3>
+            <p>
+              This blue-and-white beaker-shaped vase, dating from the Qing
+              Dynasty (1662–1722), is part of a five-piece garniture from
+              Jingdezhen, Jiangxi Province. It is painted in underglaze cobalt
+              blue, featuring court scenes on the neck and court ladies in a
+              garden on the body, divided by herringbone borders. Made from
+              white porcelain with a clear feldspathic glaze, it measures 42.5
+              cm in height. The vase was gifted to the Freer Gallery by Myron S.
+              Falk, Jr. and his sisters in 1980.
+            </p>
+
+            <!-- 3D Model Placeholder for Artifact 3 -->
+            <div class="model-viewer-container">
+              <h4>Explore 3D Model</h4>
+              <model-viewer
+                src="path-to-your-3d-model3.glb"
+                alt="Medieval Armor"
+                auto-rotate
+                camera-controls
+                background-color="#f0f0f0"
+                style="width: 100%; height: 400px"
+              ></model-viewer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Have questions about our collection? We'd love to hear from you.</p>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Visit Us</h3>
+          <p>123 Museum Street<br />City, Country</p>
+        </div>
+        <div class="footer-section">
+          <h3>Hours</h3>
+          <p>Tuesday - Sunday<br />10:00 AM - 5:00 PM</p>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <!-- Add your social media links here -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Museum of History. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
