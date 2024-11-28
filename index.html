@@ -67,203 +67,110 @@
     <section id="artifacts" class="items">
       <h2>Featured Artifacts</h2>
       <div class="artifacts-grid">
-        <!-- Artifact 1 -->
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 1 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="imgae(1)-Camera.png"
-                alt="Qing Dynasty Covered Baluster Vase - Front view"
-                class="active"
-                loading="lazy"
-              />
-              <img src="imgae(1)-Camera 2.png" alt="Artifact 1 - View 2" />
-              <img src="art 1 .sg-Camera.png" alt="Artifact 1 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button
-                class="prev"
-                onclick="changeSlide(this, -1)"
-                aria-label="Previous image"
-              >
-                <span aria-hidden="true">&#10094;</span>
-              </button>
-              <div class="slideshow-dots"></div>
-              <button
-                class="next"
-                onclick="changeSlide(this, 1)"
-                aria-label="Next image"
-              >
-                <span aria-hidden="true">&#10095;</span>
-              </button>
-            </div>
-          </div>
+       <!-- Replace each model-viewer-container with these updated versions -->
 
-          <div class="description">
-            <h3>Artifact 1: Qing Dynasty Covered Baluster Vase</h3>
-            <p>
-              This covered baluster vase is part of a five-piece garniture from
-              the Qing dynasty, dating from the Kangxi reign (1662-1722). It is
-              crafted from white porcelain with cobalt pigment under a clear
-              glaze. The vase features a painted scene of a court lady being
-              entertained by dancers and musicians, with floral decorations on
-              the neck and a domed cover adorned with ladies, flowers, and
-              rocks. Originally part of a collection owned by Mrs. B.F. Jones,
-              it was gifted to the Freer Gallery of Art in 1980 by Myron S.
-              Falk, Jr. and his sisters.
-            </p>
+<!-- For Artifact 1 -->
+<div class="model-viewer-container">
+  <h4>Explore 3D Model</h4>
+  <model-viewer
+    src="models/vase1.glb"
+    ios-src="models/vase1.usdz"
+    alt="3D model of Qing Dynasty Covered Baluster Vase"
+    poster="images/vase1-poster.webp"
+    shadow-intensity="1"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    environment-image="neutral"
+    exposure="1"
+    camera-orbit="45deg 55deg 2.5m"
+    min-camera-orbit="auto auto auto"
+    max-camera-orbit="auto auto auto"
+    interaction-prompt="auto"
+    loading="eager"
+  >
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" class="ar-button">
+      View in your space
+    </button>
+    <div class="controls">
+      <button class="control-button" onclick="resetModel(this)">Reset View</button>
+      <button class="control-button" onclick="toggleRotation(this)">Auto-Rotate</button>
+    </div>
+  </model-viewer>
+</div>
 
-            <!-- 3D Model Placeholder for Artifact 1 -->
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="path-to-your-3d-model1.glb"
-                alt="3D model of Qing Dynasty Covered Baluster Vase"
-                auto-rotate
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                background-color="#f0f0f0"
-                poster="path-to-poster-image.webp"
-                loading="lazy"
-                style="width: 100%; height: 400px"
-              >
-                <button slot="ar-button" class="ar-button">
-                  View in your space
-                </button>
+<!-- For Artifact 2 -->
+<div class="model-viewer-container">
+  <h4>Explore 3D Model</h4>
+  <model-viewer
+    src="models/vase2.glb"
+    ios-src="models/vase2.usdz"
+    alt="3D model of Qing Dynasty Vase"
+    poster="images/vase2-poster.webp"
+    shadow-intensity="1"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    environment-image="neutral"
+    exposure="1"
+    camera-orbit="45deg 55deg 2.5m"
+    min-camera-orbit="auto auto auto"
+    max-camera-orbit="auto auto auto"
+    interaction-prompt="auto"
+    loading="eager"
+  >
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" class="ar-button">
+      View in your space
+    </button>
+    <div class="controls">
+      <button class="control-button" onclick="resetModel(this)">Reset View</button>
+      <button class="control-button" onclick="toggleRotation(this)">Auto-Rotate</button>
+    </div>
+  </model-viewer>
+</div>
+
+<!-- For Artifact 3 -->
+<div class="model-viewer-container">
+  <h4>Explore 3D Model</h4>
+  <model-viewer
+    src="models/vase3.glb"
+    ios-src="models/vase3.usdz"
+    alt="3D model of Qing Dynasty Beaker-Shaped Vase"
+    poster="images/vase3-poster.webp"
+    shadow-intensity="1"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    environment-image="neutral"
+    exposure="1"
+    camera-orbit="45deg 55deg 2.5m"
+    min-camera-orbit="auto auto auto"
+    max-camera-orbit="auto auto auto"
+    interaction-prompt="auto"
+    loading="eager"
+  >
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" class="ar-button">
+      View in your space
+    </button>
+    <div class="controls">
+      <button class="control-button" onclick="resetModel(this)">Reset View</button>
+      <button class="control-button" onclick="toggleRotation(this)">Auto-Rotate</button>
+    </div>
+  </model-viewer>
+</div>
               </model-viewer>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artifact 2 -->
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 2 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="Image2(2)-Camera 2.png"
-                alt="Artifact 2 - View 1"
-                class="active"
-                loading="lazy"
-              />
-              <img src="Image2(3)-Camera 2.png" alt="Artifact 2 - View 2" />
-              <img src="imgae(3)-Camera 2.png" alt="Artifact 2 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button
-                class="prev"
-                onclick="changeSlide(this, -1)"
-                aria-label="Previous image"
-              >
-                <span aria-hidden="true">&#10094;</span>
-              </button>
-              <div class="slideshow-dots"></div>
-              <button
-                class="next"
-                onclick="changeSlide(this, 1)"
-                aria-label="Next image"
-              >
-                <span aria-hidden="true">&#10095;</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="description">
-            <h3>Artifact 2: Qing Dynasty Vase</h3>
-            <p>
-              This Qing Dynasty vase, circa 1700, originates from Jingdezhen,
-              Jiangxi Province, China. Featuring a tall cylindrical shape with a
-              narrow neck and outflaring rim, the vase is adorned with a
-              mountain and lake scene painted in cobalt pigment beneath a clear
-              glaze. It measures 26.3 cm in height and 11.7 cm in diameter, made
-              of porcelain. Previously owned by Mrs. Julia B. Curtis of
-              Williamsburg, VA, the vase was gifted to the Freer Gallery of Art
-              in 1991 and is part of its collection.
-            </p>
-
-            <!-- 3D Model Placeholder for Artifact 2 -->
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="path-to-your-3d-model2.glb"
-                alt="Roman Coin"
-                auto-rotate
-                camera-controls
-                background-color="#f0f0f0"
-                style="width: 100%; height: 400px"
-              ></model-viewer>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artifact 3 -->
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 3 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="Image3(1)-Camera 2.png"
-                alt="Artifact 3 - View 1"
-                class="active"
-                loading="lazy"
-              />
-              <img src="Image3(2)-Camera 2.png" alt="Artifact 3 - View 2" />
-              <img src="Image3(3)-Camera 2.png" alt="Artifact 3 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button
-                class="prev"
-                onclick="changeSlide(this, -1)"
-                aria-label="Previous image"
-              >
-                <span aria-hidden="true">&#10094;</span>
-              </button>
-              <div class="slideshow-dots"></div>
-              <button
-                class="next"
-                onclick="changeSlide(this, 1)"
-                aria-label="Next image"
-              >
-                <span aria-hidden="true">&#10095;</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="description">
-            <h3>Qing Dynasty Beaker-Shaped Vase</h3>
-            <p>
-              This blue-and-white beaker-shaped vase, dating from the Qing
-              Dynasty (1662–1722), is part of a five-piece garniture from
-              Jingdezhen, Jiangxi Province. It is painted in underglaze cobalt
-              blue, featuring court scenes on the neck and court ladies in a
-              garden on the body, divided by herringbone borders. Made from
-              white porcelain with a clear feldspathic glaze, it measures 42.5
-              cm in height. The vase was gifted to the Freer Gallery by Myron S.
-              Falk, Jr. and his sisters in 1980.
-            </p>
-
-            <!-- 3D Model Placeholder for Artifact 3 -->
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="path-to-your-3d-model3.glb"
-                alt="Medieval Armor"
-                auto-rotate
-                camera-controls
-                background-color="#f0f0f0"
-                style="width: 100%; height: 400px"
-              ></model-viewer>
             </div>
           </div>
         </div>
