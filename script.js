@@ -47,3 +47,7 @@ modelViewers.forEach((modelViewer) => {
     }
   });
 });
+// Initialize any custom functionality
+document.addEventListener("DOMContentLoaded", function () {
+  // Your custom JavaScript here
+});
