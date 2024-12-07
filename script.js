@@ -47,3 +47,17 @@ modelViewers.forEach((modelViewer) => {
     }
   });
 });
+function changeSlide(button, direction) {
+  const slideshow = button.closest('.slideshow');
+  const slides = slideshow.querySelectorAll('.slide');
+  let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  
+  // Remove active class from current slide
+  slides[activeIndex].classList.remove('active');
+  
+  // Calculate new index
+  activeIndex = (activeIndex + direction + slides.length) % slides.length;
+  
+  // Add active class to new slide
+  slides[activeIndex].classList.add('active');
+}
