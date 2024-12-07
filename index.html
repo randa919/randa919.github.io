@@ -16,18 +16,15 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Inline CSS for demonstration purposes. Move this to your styles.css file */
       .hero-image {
-        background-image: url("hero-image.png");
-        background-size: cover; /* Ensure the image covers the entire container */
-        background-position: center; /* Center the image */
-        height: 100vh; /* Set the height to fill the viewport */
-        width: 100%; /* Full width */
+        background-image: url("Hero image.png");
+        background-position: center;
+        height: 100vh;
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="main-nav">
       <div class="nav-container">
         <a href="#" class="logo">Museum of History</a>
@@ -41,8 +38,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Hero Section -->
     <header class="hero">
       <div
         class="hero-image"
@@ -56,8 +51,6 @@
         <a href="#artifacts" class="cta-button">Explore Collection</a>
       </div>
     </header>
-
-    <!-- Intro Section -->
     <section id="intro" class="intro">
       <div class="description">
         <h2>Welcome to the Artistry of Jingdezhen Porcelain</h2>
@@ -72,12 +65,9 @@
         </p>
       </div>
     </section>
-
-    <!-- Items Section -->
     <section id="artifacts" class="items">
       <h2>Featured Artifacts</h2>
       <div class="artifacts-grid">
-        <!-- Artifact 1 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -86,12 +76,12 @@
           >
             <div class="slideshow-container">
               <img
-                src="imgae(1)-Camera.png"
+                src="artifacts3(1).png"
                 alt="Qing Dynasty Covered Baluster Vase - Front view"
                 class="active"
               />
-              <img src="imgae(1)-Camera 2.png" alt="Artifact 1 - View 2" />
-              <img src="art 1 .sg-Camera.png" alt="Artifact 1 - View 3" />
+              <img src="artifacts3(2).png" alt="Artifact 1 - View 2" />
+              <img src="artifacts3(3).png" alt="Artifact 1 - View 3" />
             </div>
             <div class="slideshow-nav">
               <button class="prev" onclick="changeSlide(this, -1)">❮</button>
@@ -111,7 +101,6 @@
               rocks.
             </p>
 
-            <!-- 3D Model Viewer -->
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -123,15 +112,11 @@
                 auto-rotate
                 ar
               >
-                <button slot="ar-button" class="ar-button">
-                  View in your space
-                </button>
+                <button slot="ar-button" class="ar-button">View Model</button>
               </model-viewer>
             </div>
           </div>
         </div>
-
-        <!-- Artifact 2 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -140,12 +125,12 @@
           >
             <div class="slideshow-container">
               <img
-                src="Image2(2)-Camera 2.png"
+                src="artificts1(2).png"
                 alt="Artifact 2 - View 1"
                 class="active"
               />
-              <img src="Image2(3)-Camera 2.png" alt="Artifact 2 - View 2" />
-              <img src="imgae(3)-Camera 2.png" alt="Artifact 2 - View 3" />
+              <img src="artificts1(1).png" alt="Artifact 2 - View 2" />
+              <img src="artificts4.png" alt="Artifact 2 - View 3" />
             </div>
             <div class="slideshow-nav">
               <button class="prev" onclick="changeSlide(this, -1)">❮</button>
@@ -163,7 +148,6 @@
               glaze.
             </p>
 
-            <!-- 3D Model Viewer -->
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -175,15 +159,12 @@
                 auto-rotate
                 ar
               >
-                <button slot="ar-button" class="ar-button">
-                  View in your space
-                </button>
+                <button slot="ar-button" class="ar-button">View Model</button>
               </model-viewer>
             </div>
           </div>
         </div>
 
-        <!-- Artifact 3 -->
         <div class="artifact" data-aos="fade-up">
           <div
             class="slideshow"
@@ -192,12 +173,12 @@
           >
             <div class="slideshow-container">
               <img
-                src="Image3(1)-Camera 2.png"
+                src="artifacts2(1).png"
                 alt="Artifact 3 - View 1"
                 class="active"
               />
-              <img src="Image3(2)-Camera 2.png" alt="Artifact 3 - View 2" />
-              <img src="Image3(3)-Camera 2.png" alt="Artifact 3 - View 3" />
+              <img src="artifacts2(2).png" alt="Artifact 3 - View 2" />
+              <img src="artifacts2(3).png" alt="Artifact 3 - View 3" />
             </div>
             <div class="slideshow-nav">
               <button class="prev" onclick="changeSlide(this, -1)">❮</button>
@@ -215,7 +196,6 @@
               garden on the body.
             </p>
 
-            <!-- 3D Model Viewer -->
             <div class="model-viewer-container">
               <h4>Explore 3D Model</h4>
               <model-viewer
@@ -227,36 +207,11 @@
                 auto-rotate
                 ar
               >
-                <button slot="ar-button" class="ar-button">
-                  View in your space
-                </button>
+                <button slot="ar-button" class="ar-button">View Model</button>
               </model-viewer>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- New Contact Section -->
-    <section id="contact" class="contact">
-      <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p>Have questions about our collection? We'd love to hear from you.</p>
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
       </div>
     </section>
 
@@ -272,9 +227,7 @@
         </div>
         <div class="footer-section">
           <h3>Connect</h3>
-          <div class="social-links">
-            <!-- Add your social media links here -->
-          </div>
+          <div class="social-links"></div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -282,7 +235,6 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
