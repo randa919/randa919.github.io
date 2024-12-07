@@ -1,242 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Museum of History</title>
-    <meta
-      name="description"
-      content="Explore the beautiful artistry of Jingdezhen Porcelain through our virtual museum collection"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Artifact Viewer</title>
+    <!-- Load Model Viewer -->
+    <script type="module" src="vase-f1991-150k-4096.glb"></script>
     <style>
-      .hero-image {
-        background-image: url("Hero image.png");
-        background-position: center;
-        height: 100vh;
-        width: 100%;
-      }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        model-viewer {
+            width: 100%;
+            max-width: 600px;
+            height: 600px;
+        }
     </style>
-  </head>
-  <body>
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="#" class="logo">Museum of History</a>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="#intro">About</a></li>
-          <li><a href="#artifacts">Artifacts</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header class="hero">
-      <div
-        class="hero-image"
-        role="img"
-        aria-label="Historical Jingdezhen Porcelain display"
-      ></div>
-      <div class="hero-content">
-        <h1>
-          Timeless Treasures: Exploring the Artistry of Jingdezhen Porcelain
-        </h1>
-        <a href="#artifacts" class="cta-button">Explore Collection</a>
-      </div>
-    </header>
-    <section id="intro" class="intro">
-      <div class="description">
-        <h2>Welcome to the Artistry of Jingdezhen Porcelain</h2>
-        <p>
-          Welcome to Timeless Treasures, where the exquisite craftsmanship of
-          Jingdezhen porcelain comes to life. This virtual museum showcases
-          three iconic artifacts from China's Qing Dynasty, offering an
-          immersive experience through detailed 3D models. Delve into the
-          history, artistry, and cultural significance of these masterpieces,
-          and explore the intricate designs that have captivated collectors and
-          art lovers for centuries.
-        </p>
-      </div>
-    </section>
-    <section id="artifacts" class="items">
-      <h2>Featured Artifacts</h2>
-      <div class="artifacts-grid">
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 1 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="artifacts3(1).png"
-                alt="Qing Dynasty Covered Baluster Vase - Front view"
-                class="active"
-              />
-              <img src="artifacts3(2).png" alt="Artifact 1 - View 2" />
-              <img src="artifacts3(3).png" alt="Artifact 1 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-          </div>
-
-          <div class="description">
-            <h3>Artifact 1: Qing Dynasty Covered Baluster Vase</h3>
-            <p>
-              This covered baluster vase is part of a five-piece garniture from
-              the Qing dynasty, dating from the Kangxi reign (1662-1722). It is
-              crafted from white porcelain with cobalt pigment under a clear
-              glaze. The vase features a painted scene of a court lady being
-              entertained by dancers and musicians, with floral decorations on
-              the neck and a domed cover adorned with ladies, flowers, and
-              rocks.
-            </p>
-
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase1.glb"
-                ios-src="models/vase1.usdz"
-                alt="3D model of Qing Dynasty Covered Baluster Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              >
-                <button slot="ar-button" class="ar-button">View Model</button>
-              </model-viewer>
-            </div>
-          </div>
+</head>
+<body>
+    <!-- 3D Model Viewer -->
+    <model-viewer
+        src="vase-f1991-150k-4096.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        tone-mapping="neutral"
+        shadow-intensity="1"
+        alt="3D Artifact">
+        <!-- Progress Bar -->
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
         </div>
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 2 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="artificts1(2).png"
-                alt="Artifact 2 - View 1"
-                class="active"
-              />
-              <img src="artificts1(1).png" alt="Artifact 2 - View 2" />
-              <img src="artificts4.png" alt="Artifact 2 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-          </div>
-
-          <div class="description">
-            <h3>Artifact 2: Qing Dynasty Vase</h3>
-            <p>
-              This Qing Dynasty vase, circa 1700, originates from Jingdezhen,
-              Jiangxi Province, China. Featuring a tall cylindrical shape with a
-              narrow neck and outflaring rim, the vase is adorned with a
-              mountain and lake scene painted in cobalt pigment beneath a clear
-              glaze.
-            </p>
-
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase2.glb"
-                ios-src="models/vase2.usdz"
-                alt="3D model of Qing Dynasty Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              >
-                <button slot="ar-button" class="ar-button">View Model</button>
-              </model-viewer>
-            </div>
-          </div>
+        <!-- AR Button -->
+        <button slot="ar-button" id="ar-button">View in your space</button>
+        <!-- AR Prompt -->
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="Move your phone">
         </div>
-
-        <div class="artifact" data-aos="fade-up">
-          <div
-            class="slideshow"
-            role="region"
-            aria-label="Artifact 3 image gallery"
-          >
-            <div class="slideshow-container">
-              <img
-                src="artifacts2(1).png"
-                alt="Artifact 3 - View 1"
-                class="active"
-              />
-              <img src="artifacts2(2).png" alt="Artifact 3 - View 2" />
-              <img src="artifacts2(3).png" alt="Artifact 3 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-          </div>
-
-          <div class="description">
-            <h3>Artifact 3: Qing Dynasty Beaker-Shaped Vase</h3>
-            <p>
-              This blue-and-white beaker-shaped vase, dating from the Qing
-              Dynasty (1662–1722), is part of a five-piece garniture from
-              Jingdezhen, Jiangxi Province. It is painted in underglaze cobalt
-              blue, featuring court scenes on the neck and court ladies in a
-              garden on the body.
-            </p>
-
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="models/vase3.glb"
-                ios-src="models/vase3.usdz"
-                alt="3D model of Qing Dynasty Beaker-Shaped Vase"
-                shadow-intensity="1"
-                camera-controls
-                auto-rotate
-                ar
-              >
-                <button slot="ar-button" class="ar-button">View Model</button>
-              </model-viewer>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>123 Museum Street<br />City, Country</p>
-        </div>
-        <div class="footer-section">
-          <h3>Hours</h3>
-          <p>Tuesday - Sunday<br />10:00 AM - 5:00 PM</p>
-        </div>
-        <div class="footer-section">
-          <h3>Connect</h3>
-          <div class="social-links"></div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Museum of History. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
-  </body>
+    </model-viewer>
+</body>
 </html>
