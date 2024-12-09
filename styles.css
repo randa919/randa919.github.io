@@ -76,7 +76,12 @@ h4 {
   justify-content: center;
   overflow: hidden;
 }
-
+.hero-image {
+  background-image: url("Hero image.png");
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
 .hero-image {
   position: absolute;
   top: 0;

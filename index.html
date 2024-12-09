@@ -15,14 +15,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .hero-image {
-        background-image: url("Hero image.png");
-        background-position: center;
-        height: 100vh;
-        width: 100%;
-      }
-    </style>
   </head>
   <body>
     <nav class="main-nav">
@@ -51,6 +43,7 @@
         <a href="#artifacts" class="cta-button">Explore Collection</a>
       </div>
     </header>
+
     <section id="intro" class="intro">
       <div class="description">
         <h2>Welcome to the Artistry of Jingdezhen Porcelain</h2>
@@ -75,19 +68,6 @@
             aria-label="Artifact 1 image gallery"
           >
             <div class="slideshow-container">
-              <img
-                src="artifacts3(1).png"
-                alt="Qing Dynasty Covered Baluster Vase - Front view"
-                class="active"
-              />
-              <img src="artifacts3(2).png" alt="Artifact 1 - View 2" />
-              <img src="artifacts3(3).png" alt="Artifact 1 - View 3" />
-            </div>
-            <div class="slideshow-nav">
-              <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-              <button class="next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-          </div>
 
           <div class="description">
             <h3>Artifact 1: Qing Dynasty Covered Baluster Vase</h3>
@@ -100,18 +80,17 @@
               the neck and a domed cover adorned with ladies, flowers, and
               rocks.
             </p>
-
-            <div class="model-viewer-container">
-              <h4>Explore 3D Model</h4>
-              <model-viewer
-                src="./models/vase-f1991-150k-4096.glb"
-                alt="3D model of a Qing Dynasty vase"
-                camera-controls
-                auto-rotate
-                ar
-                shadow-intensity="1"
-                style="width: 100%; height: 500px"
-              >
+            <model-viewer
+            src="f1980_194-mesh-smooth-textured-150k-2048-medium-100k-2048_std_draco.glb"
+            ios-src="f1980_194-mesh-smooth-textured-150k-2048-medium-100k-2048_std.usdz"
+            poster="poster.webp"
+            alt="Vase"
+            shadow-intensity="1"
+            camera-controls
+            auto-rotate
+            ar
+          >
+          </model-viewer>
                 <button slot="ar-button" class="ar-button">View in AR</button>
               </model-viewer>
             </div>
