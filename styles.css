@@ -23,7 +23,6 @@ body {
   color: var(--text-color);
   background-color: var(--white);
 }
-
 h1,
 h2,
 h3,
@@ -76,12 +75,7 @@ h4 {
   justify-content: center;
   overflow: hidden;
 }
-.hero-image {
-  background-image: url("Hero image.png");
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-}
+
 .hero-image {
   position: absolute;
   top: 0;
@@ -370,4 +364,320 @@ model-viewer {
 .control-button:hover {
   background-color: var(--accent-color);
   color: var(--white);
+}
+
+/* Navigation */
+.main-nav {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-image {
+  background-image: url("Hero image.png");
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.7);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.description {
+  flex: 1;
+  padding: 2rem;
+  background: var(--white);
+}
+
+.description h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Model Viewer */
+.model-viewer-container {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ar-button {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 16px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.control-button {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 16px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10px;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #e6e6e6;
+}
+
+.update-bar {
+  background-color: #3498db;
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s ease;
+}
+
+.hide {
+  display: none;
+}
+.hero-image {
+  background-image: url("Hero image.png"); /* Replace with the correct image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+.ar-button {
+  background-color: var(--white);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+}
+.ar-button:hover,
+.control-button:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.artifacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.artifact {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.artifact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.artifact p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+model-viewer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .artifacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  model-viewer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  model-viewer {
+    height: 600px;
+  }
+}
+.artifact-container {
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order to place artifacts on the right */
+  align-items: center;
+  gap: 2rem; /* Space between the text and artifact */
+  margin-bottom: 2rem; /* Space between containers */
+}
+
+.artifact-description {
+  flex: 1; /* Make the text take equal space */
+  text-align: left, 100px;
+}
+
+.artifact-model {
+  flex: 1; /* Make the artifact viewer take equal space */
+  max-width: 50%; /* Adjust the width of the artifact viewer */
+}
+
+model-viewer {
+  width: 100%;
+  max-width: 500px; /* Adjust the size of the 3D model viewer */
+  height: 500px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .artifact-container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center;
+  }
+
+  .artifact-description {
+    text-align: center;
+  }
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
 }

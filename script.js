@@ -31,23 +31,47 @@ function toggleRotation(button) {
   button.textContent = modelViewer.autoRotate ? "Stop Rotation" : "Auto-Rotate";
 }
 
-// Initialize loading indicators
-const modelViewers = document.querySelectorAll("model-viewer");
-modelViewers.forEach((modelViewer) => {
-  const progressBar = modelViewer.querySelector(".progress-bar");
+// Object to store the current index for each carousel
+const currentIndices = {};
 
-  modelViewer.addEventListener("progress", (event) => {
-    const progress = event.detail.totalProgress * 100;
-    const updateBar = progressBar.querySelector(".update-bar");
-    updateBar.style.width = `${progress}%`;
-    if (progress === 100) {
-      progressBar.classList.add("hide");
-    } else {
-      progressBar.classList.remove("hide");
-    }
+// Initialize all carousels
+document.querySelectorAll(".carousel-container").forEach((carousel) => {
+  const carouselId = carousel.getAttribute("data-carousel-id");
+
+  // Set initial index for the carousel
+  currentIndices[carouselId] = 0;
+
+  // Get carousel elements
+  const slides = carousel.querySelectorAll(".carousel-images img");
+  const totalSlides = slides.length;
+
+  // Add event listeners for the buttons
+  const prevButton = carousel.querySelector(".prev-btn");
+  const nextButton = carousel.querySelector(".next-btn");
+
+  // Previous button event listener
+  prevButton.addEventListener("click", () => {
+    moveSlide(-1, carouselId, totalSlides);
+  });
+
+  // Next button event listener
+  nextButton.addEventListener("click", () => {
+    moveSlide(1, carouselId, totalSlides);
   });
 });
-// Initialize any custom functionality
-document.addEventListener("DOMContentLoaded", function () {
-  // Your custom JavaScript here
-});
+
+function moveSlide(step, carouselId, totalSlides) {
+  // Update the currentIndex for the carousel
+  currentIndices[carouselId] =
+    (currentIndices[carouselId] + step + totalSlides) % totalSlides;
+
+  // Get the carousel and update the images
+  const carousel = document.querySelector(
+    `.carousel-container[data-carousel-id="${carouselId}"]`
+  );
+  const carouselImages = carousel.querySelector(".carousel-images");
+
+  carouselImages.style.transform = `translateX(-${
+    currentIndices[carouselId] * 100
+  }%)`;
+}
